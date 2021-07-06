@@ -83,8 +83,8 @@ def press_release_X_y(root: str = "./data", features=None):
     root = root[:-1] if root[-1] == "/" else root
 
     # init X and y
-    X = press_release_X_df(f"{root}/files")
-    y = press_release_y_df(f"{root}/csv/files.csv", features)
+    X = press_release_X_df(f"{root}/files/doj")
+    y = press_release_y_df(f"{root}/csv/random_y_from_bucket.csv", features)
 
     # be sure same length
     assert len(X) == len(y)
