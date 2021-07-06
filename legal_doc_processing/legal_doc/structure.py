@@ -8,12 +8,14 @@ def _del_dummy_breaklines(txt: str):
     """ """
 
     new_txt = (
-        txt.replace("\n.", "$$$$")
+        txt.replace(".\n", "$$$$")
         .replace("\n", " ")
         .replace("  ", " ")
         .replace("  ", " ")
         .replace("  ", " ")
-        .replace("$$$$", "\n")
+        .replace("  ", " ")
+        .replace("  ", " ")
+        .replace("$$$$", ".\n")
     )
 
     return new_txt
